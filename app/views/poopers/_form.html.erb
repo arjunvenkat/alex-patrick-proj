@@ -1,0 +1,35 @@
+<%= form_for(@pooper) do |f| %>
+  <% if @pooper.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pooper.errors.count, "error") %> prohibited this pooper from being saved:</h2>
+
+      <ul>
+      <% @pooper.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="field">
+    <%= f.label :interesection %><br>
+    <%= f.text_field :interesection %>
+  </div>
+  <div class="field">
+    
+    <%= f.label :quality %><br>
+    
+    <%= f.number_field :quality %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.text_field :price %>
+  </div>
+
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

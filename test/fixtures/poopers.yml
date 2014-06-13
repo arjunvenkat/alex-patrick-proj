@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  interesection: MyString
+  quality: 1
+  price: MyString
+
+two:
+  interesection: MyString
+  quality: 1
+  price: MyString

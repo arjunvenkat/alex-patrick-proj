@@ -1,0 +1,74 @@
+
+
+<style>  
+  html, body, .container{
+  width: 100%;
+  height: 100%;
+  min-width: 500px;
+  min-height: 500px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.container{
+  background-color: #007ced;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #007ced), to(#cce7ff));
+	background: -webkit-linear-gradient(top, #007ced 1%, #cce7ff 100%);
+	background: linear-gradient(to bottom, #007ced 1%,#cce7ff 100%);
+}
+#cloud-intro{
+  position: relative;
+  height: 100%;
+  background: url(http://static.radulescu.me/examples/clouds/clouds1000.png);
+  background: url(http://static.radulescu.me/examples/clouds/clouds1000.png) 0 200px,
+              url(http://static.radulescu.me/examples/clouds/clouds1200_1.png) 0 300px,
+              url(http://static.radulescu.me/examples/clouds/clouds1000_blur3.png) 100px 250px;
+	-webkit-animation: wind 20s linear infinite;
+	animation: wind 20s linear infinite;
+}
+@-webkit-keyframes wind{
+  0% {
+    background-position: 0 200px, 0 300px, 100px 250px;
+  }
+  100% {
+    background-position: 1000px 200px, 1200px 300px, 1100px 250px;
+  }
+
+}
+@keyframes wind{
+  0% {
+    background-position: 0 200px, 0 300px, 100px 250px;
+  }
+  100% {
+    background-position: 1000px 200px, 1200px 300px, 1100px 250px;
+  }
+
+}
+  .main {
+    position: bottom;
+  }
+
+  p {text-align: center;
+ }
+  
+   h1
+  {position:relative;
+ top:150px;}
+  
+  p 
+  {position:relative;
+ top:150px;
+  }
+  
+</style>
+<div class="container">
+   <div id="cloud-intro">
+     <h1 style="text-align: center;"> Welcome to Find A Pooper </h1>
+        <p> <%= link_to 'View Poopers', poopers_path %> </p>
+        <p> <%= link_to 'New Pooper' , new_pooper_path %> </p>
+        <p> <%= link_to 'Map', '/maps' %> </p> 
+     <p> <%= link_to 'Your Location', '/house' %> </p>
+
+    </div>
+  </div>
+<img src="http://btstrategy.com/wp-new/wp-content/uploads/2013/10/cloud2_55171579.jpg">
